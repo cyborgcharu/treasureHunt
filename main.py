@@ -1,7 +1,17 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def initializeGame():
+def updateVisualization(stateX):
+	plt.draw()
+
+
+def learn(callback):
+
+	stateX = ()
+	callback(stateX)
+
+
+def playGame():
 
 	randInt = np.random.randint(1,5, size=4)
 
@@ -25,11 +35,14 @@ def initializeGame():
 
 	ax.legend()
 
+
+	learn(updateVisualization)
+
 	plt.show()
 
 
 def main():
-	initializeGame()
+	playGame()
 
 if __name__ == "__main__":
 	main()
