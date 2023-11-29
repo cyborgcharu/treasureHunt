@@ -23,6 +23,8 @@ def initializeGame():
 	ax.set_xticklabels(np.arange(1, 5))
 	ax.set_yticklabels(np.arange(1, 5))
 
+	ax.legend()
+
 	plt.show()
 
 
