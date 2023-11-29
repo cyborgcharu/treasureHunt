@@ -1,4 +1,4 @@
-# Treasure Hunt/ Q-Learning
+# Treasure Hunt
 
 ## **Overview:**
 
