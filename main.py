@@ -2,16 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def initializeGame():
-	"""Generates random coordinates for treasure and agent start
-
-	Returns
-	-------
-	treasure_coordinates: 
-		tuple of treasure x, y location
-
-	start_coordinates:
-		tuple of agent start x, y location
-	"""
 
 	randInt = np.random.randint(0,4, size=4)
 
