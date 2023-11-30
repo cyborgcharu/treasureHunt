@@ -2,18 +2,44 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
+alpha = 0.1
+gamma = 0.9
+epsilon = 0.25
+n = 20
+
 q_table = np.zeros((16,4))
 
-def updateVisualization(stateY):
+
+def updateVisualization(stateX):
 	plt.draw()
+
+def coordinatesToStates(coordinates):
+	return coordinates[0] * 4 + coordinates[1]
+
+def takeAction(stateX, action):
+	return
+
 
 
 def learn(stateX, callback):
-	print(stateX)
+
+	for episode in range(n):
+		stateX = coordinatesToStates(stateX)
+		done = false
+
+		while not done:
+			if np.random.uniform(0,1) < epsilon:
+				action = np.random.choice(np.arange(1,17))
+			else:
+				action = np.argmax(q_table[stateX])
 
 
-	stateY = ()
-	callback(stateY)
+	stateY, reward, done = takeAction(stateX, action)
+	q_table[state, action] = q_table[state, action] + alpha * (reward + gamma*np.max(q_table[stateY]) - q_table[stateX, action])
+
+	stateX = stateY
+
+	callback(stateX)
 
 
 def playGame():
