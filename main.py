@@ -9,9 +9,9 @@ n = 20
 
 q_table = np.zeros((16,4))
 
-randInt = np.random.randint(1,5, size=4)
-treasure_coordinates = (randInt[0] - 1, randInt[1] - 1)
-start_coordinates = (randInt[2] - 1, randInt[3] - 1)
+randInt = np.random.randint(0,4, size=4)
+treasure_coordinates = (randInt[0], randInt[1])
+start_coordinates = (randInt[2], randInt[3])
 
 
 def coordinatesToStates(coordinates):
