@@ -1,14 +1,19 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def updateVisualization(stateX):
+
+q_table = np.arange(1,65).reshape((16,4))
+
+def updateVisualization(stateY):
 	plt.draw()
 
 
-def learn(callback):
+def learn(stateX, callback):
+	print(stateX)
 
-	stateX = ()
-	callback(stateX)
+
+	stateY = ()
+	callback(stateY)
 
 
 def playGame():
@@ -36,7 +41,7 @@ def playGame():
 	ax.legend()
 
 
-	learn(updateVisualization)
+	learn(start_coordinates, updateVisualization)
 
 	plt.show()
 
