@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-q_table = np.arange(1,65).reshape((16,4))
+q_table = np.zeros((16,4))
 
 def updateVisualization(stateY):
 	plt.draw()
