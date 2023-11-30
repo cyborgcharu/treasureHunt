@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 alpha = 0.1
 gamma = 0.9
-epsilon = 0.25
+epsilon = 0.1
 n = 20
 
 q_table = np.zeros((16,4))
@@ -74,7 +74,7 @@ def updateVisualization(stateX, ax):
 	ax.legend()
 
 	plt.draw()
-	plt.pause(0.1)
+	plt.pause(10)
 
 def learn(stateX, ax):
 
@@ -93,9 +93,9 @@ def learn(stateX, ax):
 				action = np.argmax(q_table[stateX])
 
 
-		stateY, reward, done = takeAction(stateX, action)
-		q_table[state, action] = q_table[state, action] + alpha * (reward + gamma*np.max(q_table[stateY]) - q_table[stateX, action])
-		stateX = stateY
+			stateY, reward, done = takeAction(stateX, action)
+			q_table[stateX, action] = q_table[stateX, action] + alpha * (reward + gamma*np.max(q_table[stateY]) - q_table[stateX, action])
+			stateX = stateY
 
 	updateVisualization(stateX, ax)
 
