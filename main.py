@@ -40,7 +40,7 @@ def isOffGrid(coordinates):
 
 def takeAction(stateX, action):
 	currentCoordinates = stateToCoordinates(stateX)
-	print(f"Current Coordinates: {currentCoordinates}, Action Taken: {action}")  # Debugging line
+	print(f"Current Coordinates: {currentCoordinates}, Action Taken: {action}")
 
 	actions = [(-1,0), (1,0), (0,-1), (0,1)]
 	newCoordinates = applyActionToCoordinates(currentCoordinates, actions[action])

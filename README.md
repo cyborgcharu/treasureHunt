@@ -32,7 +32,7 @@ The Q-Learning Treasure Hunt Grid Game is a simple, yet engaging Python-based pr
 
 1. **Python 3.x**: The primary programming language for the project.
 2. **Numpy**: For efficient numerical computations, especially for handling the Q-table.
-3. **Matplotlib** (optional): For visualizing the grid and the agent's path.
+3. **Matplotlib**: For visualizing the grid and the agent's path.
 
 ## **Roadmap:**
 
