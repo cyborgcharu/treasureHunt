@@ -17,7 +17,7 @@ def coordinatesToStates(coordinates):
 	return coordinates[0] * 4 + coordinates[1]
 
 def takeAction(stateX, action):
-	return
+	return stateY, reward, done
 
 
 
@@ -25,7 +25,7 @@ def learn(stateX, callback):
 
 	for episode in range(n):
 		stateX = coordinatesToStates(stateX)
-		done = false
+		done = False
 
 		while not done:
 			if np.random.uniform(0,1) < epsilon:
