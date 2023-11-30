@@ -74,7 +74,7 @@ def updateVisualization(stateX, ax):
 	ax.legend()
 
 	plt.draw()
-	plt.pause(10)
+	plt.pause(5)
 
 def learn(stateX, ax):
 
@@ -97,7 +97,8 @@ def learn(stateX, ax):
 			q_table[stateX, action] = q_table[stateX, action] + alpha * (reward + gamma*np.max(q_table[stateY]) - q_table[stateX, action])
 			stateX = stateY
 
-	updateVisualization(stateX, ax)
+			updateVisualization(stateX, ax)
+			plt.pause(2)
 
 
 def playGame():
@@ -121,7 +122,7 @@ def playGame():
 
 	learn(start_coordinates, ax)
 
-	plt.show(block=False)
+	plt.show()
 
 
 def main():
